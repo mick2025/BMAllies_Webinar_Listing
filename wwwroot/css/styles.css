@@ -1,0 +1,312 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: #343434;
+}
+
+.topLogoContainer {
+    text-align: center;
+}
+
+.topLogo {
+    margin-top: 6.8rem;
+    margin-bottom: 5rem;
+}
+
+.heroMain {
+    background-image: linear-gradient( to top left, #89d0e6 0%, #009aca 60%, #0573a1 100% );
+}
+
+.bannerContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+    position: relative;
+}
+
+.heroBanner {
+    width: 100%;
+    display: none;
+}
+
+.heroText {
+    position: initial;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.textContainer {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .heroBanner {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .textContainer {
+        width: 80%;
+        text-align: left;
+    }
+
+    .heroText {
+        position: absolute;
+        top: 10rem;
+        left: 4rem;
+        font-weight: 600;
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .heroText {
+        top: 12rem;
+        left: 10rem;
+        font-weight: 600;
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .heroText {
+        top: 14rem;
+        left: 10rem;
+        font-weight: 600;
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .heroText {
+        top: 17rem;
+        left: 10rem;
+        font-weight: 600;
+        font-size: 6rem;
+    }
+}
+
+@media (min-width: 1600px) {
+    .heroText {
+        top: 22rem;
+        left: 10rem;
+        font-weight: 600;
+        font-size: 7rem;
+    }
+}
+
+
+/*header section*/
+.webinarHeader {
+    margin-top: 5rem;
+}
+
+.webinarHeaderButtonRow {
+    background-color: #fafafa;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.formButton {
+    background-color: #00b2ca;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.headerButton {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.bmAllies {
+    color: #000;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2.5rem; /* 2.481rem */
+    padding-top: 5rem;
+}
+
+.headerButtonDesktopContainer {
+    display: none;
+}
+
+.promptContainer {
+    margin-top: 5rem;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .headerButtonDesktopContainer {
+        display: inline-block;
+    }
+
+    .headerButtonMobileContainer {
+        display: none;
+    }
+
+    .webinarHeaderButtonRow {
+        text-align: left;
+    }
+
+    .bmAllies {
+        margin-top: 0px;
+        margin-right: 4rem;
+        margin-left: 5rem;
+    }
+
+    .promptContainer {
+        margin-top: 0px;
+    }
+}
+
+/*Webinar item section*/
+.webinar {
+    border: 1px solid #e7e7e7;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-left: 5.3rem;
+    padding-right: 5.3rem;
+    margin-top: 5rem;
+}
+
+.webinarTitleRow {
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 2.5rem;
+    margin-top: 5rem;
+}
+
+.webinarDate {
+    position: relative;
+}
+
+.webinarTime {
+    margin-bottom: 1.7rem;
+}
+
+.company { font-size: 1.3rem}
+
+.dateContainer {
+    width: 8rem;
+    position: absolute;
+    right: 0;
+}
+
+.webinarTitleText {
+    font-size: 2.2rem;
+    font-family: 500;
+    letter-spacing: 0.1rem;
+}
+
+.webinarDateTimeHeader {
+    color: #00b2ca;
+    font-weight: 600;
+}
+
+.webinarDateTimeText {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.webinarDescRow {
+    font-weight: 400;
+    line-height: 2.7rem;
+    letter-spacing: 0.075rem;
+}
+
+.webinarButtonRow {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.dateTimeDesktop {
+    display: none;
+}
+
+.dateTimeMobile {
+    margin-bottom: 3rem;
+}
+
+/* media queries */
+
+@media (min-width: 768px) {
+    .dateTimeDesktop {
+        display: inline-block;
+    }
+
+    .dateTimeMobile {
+        display: none;
+    }
+}
+
+/*footer section*/
+.webinarFooter {
+    margin-top: 5rem;
+    color: #fff;
+    background-image: linear-gradient( to top left, #89d0e6 0%, #009aca 60%, #0573a1 100% );
+}
+
+.footerTop {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    padding-bottom: 3.6rem;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+}
+
+.footerTopRight {
+    text-align: center;
+    margin-top: 0.7rem;
+}
+
+    .footerTopRight img {
+        margin-left: 1rem;
+        padding-right: 0px;
+    }
+
+.footerBottom {
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 10rem;
+    padding-left: 0px;
+}
+
+.footerLogoContainer {
+    padding-left: 0px;
+    margin-bottom: 5rem;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+    .footerTop {
+        text-align: left;
+    }
+
+    .footerTopRight {
+        text-align: right;
+        padding-right: 0px;
+    }
+
+    .footerLogoContainer {
+        margin-bottom: 0px;
+    }
+}

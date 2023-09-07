@@ -1,0 +1,91 @@
+﻿@page
+@using System.Globalization;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@* Hero begin *@
+<div class="container">
+    <div class="row">
+        <div class="col-md topLogoContainer">
+            <img class="topLogo" src="/images/Logo.png" alt="BMA Logo" />
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid heroMain">
+    <div class="row">
+        <div class="col bannerContainer">
+            <img class="img-fluid heroBanner" src="/images/banner.png" alt="" />
+            <div class="container heroText">
+                <div class="col-md-7">
+                    <div class="textContainer">Training Session Registration</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Header begin *@
+<div class="container webinarHeader">
+    <div class="row">
+        <div class="col-md">
+            Elevate your skills with our transformative training event! Dive deep
+            into hand on-sessions, gain practical expertise, and connect with
+            peers. Unleash your potential and chart a path to success. Enroll
+            today!
+        </div>
+    </div>
+
+    <div class="row webinarHeaderButtonRow">
+        <div class="col-md promptContainer">
+            <span class="bmAllies">For more information on BM Allies</span>
+            <a href="https://www.bmallies.com" target="_blank">
+                <input type="button"
+                   class="formButton headerButton headerButtonDesktopContainer"
+                       value="CLICK HERE" />
+            </a>
+        </div>
+        <div class="col-md headerButtonMobileContainer">
+            <a href="https://www.bmallies.com" target="_blank">
+                <input type="button"
+                   class="formButton headerButton"
+                   value="CLICK HERE" /></a>
+        </div>
+    </div>
+</div>
+
+@foreach(var webinar in Model.webinarList)
+{
+    @Html.Raw(Model.eventHtml.Replace("#TITLE#", webinar.Title).Replace("#DESCRIPTION#",webinar.Description)
+            .Replace("#TIME#", webinar.EventDate?.ToString("t", new CultureInfo("en-US")) ?? "")
+            .Replace("#DATE#", webinar.EventDate?.ToString("d", new CultureInfo("en-US")) ?? "")
+            .Replace("#COMPANY#",webinar.Company)
+            .Replace("#LINK#",webinar.RegistrationLink));       
+}
+
+<div class="container-fluid webinarFooter">
+    <div class="row">
+        <div class="col-md">
+            <div class="container">
+                <div class="row footerTop">
+                    <div class="col-md-6 footerLogoContainer">
+                        <img src="/images/footerLogo.png" alt="Logo" />
+                    </div>
+                    <div class="col-md-6 footerTopRight">
+                        <a href="https://www.facebook.com/bmallies" target="_blank"><img src="/images/facebook-footer.png" alt="Facebook" /></a>
+                        <a href="https://twitter.com/bmallies" target="_blank"><img src="/images/twitter-icon.png" alt="Twitter" /></a>
+                        <a href="https://www.pinterest.com/bmallies" target="_blank"><img src="/images/pinterest-footer.png" alt="Pinterest" /></a>
+                        <a href="https://www.instagram.com/bmalliescorp/" target="_blank"><img src="/images/instagram-footer.png" alt="Instagram" /></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md footerBottom">
+                        Copyright &copy; 2023 BMA. All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
